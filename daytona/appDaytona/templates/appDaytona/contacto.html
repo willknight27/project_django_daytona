@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/fontawesome-free-5.15.3-web/css/all.min.css">
+  <title>Contacto</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html"><span id="titulo_navbar">DAYTONA</span>
+          <img src="img/logo.jpg" class="logo-navbar img-fluid">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+          aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" href="contacto.html">Contacto</a>
+            </li>
+          </ul>
+          <div class="d-flex">
+            <a class="nav-link" href="login.html"><button type="button" class="btn btn-outline-info"><i
+                  class=" icono_login fas fa-sign-in-alt"></i>Ingresar</button></a>
+            <a class="nav-link" href="sign_up.html"><button type="button" class="btn btn-outline-info"><i
+                  class=" icono_login far fa-user"></i>Registrarse</button></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="contenedor_contacto container mt-5">
+      <h2 id="titulo__contacto">Contáctanos</h2>
+      <br>
+      <div class="row">
+        <div class="col-md-6">
+
+          <form id="formulario-contacto">
+
+            <div class="mb-2 has-validation">
+              <!--Correo-->
+              <label class="form-label" for="nombre-txt">Nombre</label>
+              <input class="form-control" id="nombre-txt" type="text">
+              <div class="invalid-feedback">
+                Por favor ingrese su nombre.
+              </div>
+            </div>
+
+            <div class="mb-2 has-validation">
+              <!--Correo-->
+              <label class="form-label" for="correo-txt">Correo</label>
+              <input class="form-control" id="correo-txt" type="email">
+              <div class="invalid-feedback">
+                Por favor ingrese su correo.
+              </div>
+            </div>
+
+            <div class="mb-2">
+              <label for="mensaje-txt" class="form-label">Mensaje</label>
+              <textarea class="form-control" id="mensaje-txt" placeholder=""></textarea>
+              <div class="invalid-feedback">
+                Por favor escriba su mensaje y lo contactaremos.
+              </div>
+            </div>
+
+
+            <div class="mt-4">
+              <button class="btn btn-success" type="submit">Enviar</button>
+            </div>
+
+          </form>
+        </div>
+
+        <div class="col-md-1"></div>
+
+        <div class="col-md-5 mb-4">
+          <div id="map"></div>
+          <br>
+          <p><i class="fa fa-map-marker"></i> Libertad 123, Viña de Mar</p>
+          <p><i class="fa fa-phone"></i> +56 32 247856310</p>
+          <p><i class="fa fa-envelope"></i> daytona@automotriz.cl</p>
+
+          <hr>
+
+          <div class="media">
+            <ul class="list-unstyled">
+              <li><a target="_blank" href="http://www.facebook.com"><i class="fab fa-facebook-f link__contacto"></i></a>
+              </li>
+              <li><a target="_blank" href="http://www.twitter.com"><i class="fab fa-twitter link__contacto"></i></a>
+              </li>
+              <li><a target="_blank" href="http://www.instagram.com"><i class="fab fa-instagram link__contacto"></i></a>
+              </li>
+              <li><a target="_blank" href="http://www.youtube.com"><i class="fab fa-youtube link__contacto"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+    crossorigin="anonymous"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  <script src="js/contacto.js"></script>
+  <script src="js/google_maps.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap"></script>
+</body>
+
+</html>
