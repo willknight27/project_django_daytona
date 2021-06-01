@@ -1,3 +1,4 @@
+{% load static %}
 <!doctype html>
 <html lang="es">
 
@@ -11,8 +12,8 @@
     integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet"> 
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="vendor/fontawesome-free-5.15.3-web/css/all.min.css">
+  <link rel="stylesheet" href="{% static 'appDaytona/css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'appDaytona/vendor/fontawesome-free-5.15.3-web/css/all.min.css' %}">
 
   <title>Inicio</title>
 </head>
@@ -23,7 +24,7 @@
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="index.html"><span id="titulo_navbar">DAYTONA</span>
-          <img src="img/logo.jpg" class="logo-navbar img-fluid">
+          <img src="{% static 'appDaytona/img/logo.jpg' %}" class="logo-navbar img-fluid">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
           aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,17 +33,17 @@
         <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+              <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Inicio</a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="contacto.html">Contacto</a>
+              <a class="nav-link" href="{% url 'contacto' %}">Contacto</a>
             </li>
           </ul>
           <div class="d-flex">
-            <a class="nav-link" href="login.html"><button type="button" class="btn btn-outline-info"><i
+            <a class="nav-link" href="{% url 'login' %}"><button type="button" class="btn btn-outline-info"><i
                   class=" icono_login fas fa-sign-in-alt"></i>Ingresar</button></a>
-            <a class="nav-link" href="sign_up.html"><button type="button" class="btn btn-outline-info"><i
+            <a class="nav-link" href="{% url 'sign_up' %}"><button type="button" class="btn btn-outline-info"><i
                   class=" icono_login far fa-user"></i>Registrarse</button></a>
           </div>
         </div>
@@ -62,7 +63,7 @@
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <a href="detalle_trabajo/detalle_1.html"><img src="img/auto1_carrusel.jpeg" class="d-block w-100"
+          <a href="{% url 'detalle1' %}"><img src="{% static 'appDaytona/img/auto1_carrusel.jpeg' %}" class="d-block w-100"
               alt="..."></a>
           <div class="carousel-caption d-none d-md-block">
             <h3>Detalles de nuestros servicios</h3>
@@ -70,7 +71,7 @@
           </div>
         </div>
         <div class="carousel-item">
-          <a href="detalle_trabajo/detalle_2.html"><img src="img/auto2_carrusel.jpg" class="d-block w-100"
+          <a href="{% url 'detalle2' %}"><img src="{% static 'appDaytona/img/auto2_carrusel.jpg' %}" class="d-block w-100"
               alt="..."></a>
           <div class="carousel-caption d-none d-md-block">
             <h3>Detalles de nuestros servicios</h3>
@@ -78,7 +79,7 @@
           </div>
         </div>
         <div class="carousel-item">
-          <a href="detalle_trabajo/detalle_3.html"><img src="img/auto3_carrusel.jpg" class="d-block w-100"
+          <a href="{% url 'detalle3' %}"><img src="{% static 'appDaytona/img/auto3_carrusel.jpg' %}" class="d-block w-100"
               alt="..."></a>
           <div class="carousel-caption d-none d-md-block">
             <h3>Detalles de nuestros servicios</h3>
@@ -167,7 +168,7 @@
 
         <div class="div-card col-lg-6 d-flex justify-content-center">
           <div class="card mt-5 ms-5" style="width: 18rem;">
-            <a href="detalle_trabajo/detalle_3.html"><img src="img/auto3b.jpg" class="card-img-top" alt="auto3b"></a>
+            <a href="{% url 'detalle3' %}"><img src="{% static 'appDaytona/img/auto3b.jpg' %}" class="card-img-top" alt="auto3b"></a>
             <div class="card-body">
               <p class="card-text">Marca: Land Rover <br>Modelo: Range Rover <br>Fecha Reparación: 20-01-2021</p>
             </div>
@@ -207,7 +208,7 @@
     integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
     crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-  <script src="js/indicadores.js"></script>
+  <script src="{% static 'appDaytona/js/indicadores.js' %}"></script>
 </body>
 
 </html>
